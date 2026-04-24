@@ -471,8 +471,8 @@ footer { text-align:center; padding:30px 20px; color:#888; font-size:12px; }
 </head>
 <body>
 <header>
-  <div class="carnegie">카네기경영연구원<br>CMR-2026-0424-012</div>
-  <h1>🐟 (주)다복수산 정책자금 매칭 <span class="version">v12 · 완료상태</span></h1>
+  <div class="carnegie">카네기경영연구원<br>CMR-2026-0424-011</div>
+  <h1>🐟 (주)다복수산 정책자금 매칭 <span class="version">v11 · 모바일</span></h1>
   <div class="sub">
     <span id="liveTodayDate" style="background:#ffd43b;color:#000;padding:3px 10px;border-radius:4px;font-weight:700;">로딩중...</span>
     자동 D-day · 모바일 최적화 · 📤 공유
@@ -636,7 +636,7 @@ footer { text-align:center; padding:30px 20px; color:#888; font-size:12px; }
 </div>
 
 <footer>
-  카네기경영연구원(주) · CMR-2026-0424-012 · 🐟 (주)다복수산 · 모바일 최적화 · URL 공유 가능<br>
+  카네기경영연구원(주) · CMR-2026-0424-011 · 🐟 (주)다복수산 · 모바일 최적화 · URL 공유 가능<br>
   <span style="font-size:11px;color:#aaa;">공고 일정·중복지원 규정은 개별 공고·심사 시 변경될 수 있으므로 기관 확인 필수</span>
 </footer>
 
@@ -649,6 +649,44 @@ const DATA = {"company": {"name": "(주)다복수산", "related": ["(주)다복 
 const programs = DATA.programs;
 const idToName = DATA.id_to_name;
 const idToShort = DATA.id_to_short;
+
+// ====================================================
+// 🔒 v13: 관리자 제어 시스템 (Kill Switch + 만료일)
+// ====================================================
+// 기본은 '비활성' 상태 — 아무 영향 없음
+// 차단 방법: Claude에 "다복수산 프로그램 차단해줘" 요청
+// 복구 방법: Claude에 "다복수산 프로그램 복구해줘" 요청
+// ====================================================
+
+const EXPIRY_DATE = '2099-12-31';  // 만료일 (사실상 무제한 — 필요시 단축)
+const STATUS_URL = 'status.json';  // 원격 차단 상태 확인
+
+function showBlockScreen(title, msg) {
+  document.body.innerHTML = `
+    <div style="padding:60px 24px;text-align:center;font-family:'Malgun Gothic',sans-serif;background:linear-gradient(135deg,#0a2647,#144272);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <div style="font-size:64px;margin-bottom:20px;">${title.split(' ')[0]}</div>
+      <h1 style="font-size:24px;margin:0 0 16px;color:#ffd43b;">${title.split(' ').slice(1).join(' ')}</h1>
+      <p style="font-size:15px;line-height:1.7;max-width:500px;opacity:.9;">${msg}</p>
+      <p style="font-size:13px;margin-top:30px;opacity:.7;">카네기경영연구원(주)<br>문의: (주)다복수산 담당 컨설턴트</p>
+    </div>`;
+}
+
+// 1. 만료일 체크 (오프라인에서도 작동)
+if (new Date() > new Date(EXPIRY_DATE)) {
+  showBlockScreen('⏰ 사용기간 만료', '이 프로그램은 사용 기간이 만료되었습니다.<br>최신 버전은 담당 컨설턴트에게 문의해 주세요.');
+  throw new Error('Expired');
+}
+
+// 2. 원격 Kill Switch (온라인 전용, 오프라인시 자동 통과)
+fetch(STATUS_URL + '?t=' + Date.now(), {cache:'no-store'})
+  .then(r => r.ok ? r.json() : null)
+  .then(status => {
+    if (status && status.disabled === true) {
+      showBlockScreen('⛔ 프로그램 사용중지',
+        status.message || '이 프로그램은 현재 사용이 중지되었습니다.<br>재사용을 원하시면 담당 컨설턴트에게 문의해 주세요.');
+    }
+  })
+  .catch(() => {});  // 네트워크 오류시 무시 — 오프라인 HTML도 정상 작동
 
 // ====================================================
 // 📱 v11: 모바일 공유 + 상단 스크롤

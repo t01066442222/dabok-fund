@@ -1,0 +1,7 @@
+{
+  "disabled": false,
+  "message": "",
+  "expiry": "2099-12-31",
+  "last_updated": "2026-04-24",
+  "_comment": "disabled를 true로 바꾸면 전 세계 접속자 즉시 차단. message에 사용자 안내 문구 입력 가능."
+}
