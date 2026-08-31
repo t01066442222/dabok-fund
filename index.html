@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>(주)다복수산 정책자금 매칭 프로그램 v14</title>
-<meta property="og:title" content="(주)다복수산 정책자금 매칭 프로그램 v14">
-<meta property="og:description" content="2026 하반기 현행화 · 지금 당장 신청 가능한 정책자금 · 자동 D-day · 모바일 최적화">
+<title>(주)다복수산 정책자금 매칭 프로그램 v15</title>
+<meta property="og:title" content="(주)다복수산 정책자금 매칭 프로그램 v15">
+<meta property="og:description" content="2026 경영안정자금 신청 실행 단계 · 기업은행 제출서류 10종 정밀분석 · 자동 D-day · 모바일 최적화">
 <meta property="og:type" content="website">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -21,31 +21,59 @@ header .hsub{font-size:14px;opacity:.92}
 section{margin-top:22px}
 .sec-h{font-size:19px;font-weight:800;color:#0a2647;margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid #c9a227;display:flex;align-items:center;gap:8px}
 .alert0{background:#fff5f5;border:2px solid #e03131;border-radius:14px;padding:18px 20px;margin-top:18px}
-.alert0 .a0-t{color:#c92a2a;font-weight:800;font-size:17px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.alert0 .a0-t{color:#c92a2a;font-weight:800;font-size:17px;margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .alert0 p{font-size:14px;color:#5c2b2b}
 .alert0 .a0-then{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .a0-then div{background:#fff;border-radius:10px;padding:10px 12px;font-size:13px;border-left:4px solid #e03131}
 .a0-then div.ok{border-left-color:#2b8a3e}
+.a0-dday{background:#e03131;color:#fff;font-weight:800;font-size:15px;padding:3px 12px;border-radius:14px}
 .profile{background:#fff;border-radius:14px;padding:18px 20px;margin-top:16px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .profile table{width:100%;border-collapse:collapse;font-size:13.5px}
-.profile th{text-align:left;color:#1864ab;width:96px;padding:5px 8px 5px 0;vertical-align:top;white-space:nowrap}
+.profile th{text-align:left;color:#1864ab;width:110px;padding:5px 8px 5px 0;vertical-align:top;white-space:nowrap}
 .profile td{padding:5px 0}
 .change{background:#fffbe6;border:1px solid #ffe066;border-radius:12px;padding:14px 18px;margin-top:14px;font-size:13.5px}
 .change b{color:#9c6500}
+.apply{background:linear-gradient(135deg,#e7f5ff,#fff);border:2px solid #1864ab;border-radius:14px;padding:18px 20px;margin-top:16px;box-shadow:0 2px 12px rgba(24,100,171,.12)}
+.apply .ap-t{font-size:17px;font-weight:800;color:#1864ab;margin-bottom:10px}
+.apply table{width:100%;border-collapse:collapse;font-size:13.5px}
+.apply th{text-align:left;color:#1864ab;width:130px;padding:5px 8px 5px 0;vertical-align:top;white-space:nowrap}
+.apply td{padding:5px 0}
+.fin{background:#fff;border-radius:14px;padding:14px 8px;box-shadow:0 2px 12px rgba(0,0,0,.06);overflow-x:auto}
+.fin table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+.fin th{background:#0a2647;color:#fff;padding:8px 10px;text-align:left;font-size:12.5px;white-space:nowrap}
+.fin td{padding:8px 10px;border-bottom:1px solid #f1f3f5;white-space:nowrap}
+.fin td.num{text-align:right;font-variant-numeric:tabular-nums}
+.up{color:#2b8a3e;font-weight:700}.down{color:#c92a2a;font-weight:700}
+.finnote{font-size:12px;color:#868e96;margin-top:8px;padding:0 10px}
+.chk{background:#fff;border-radius:14px;padding:14px 8px;box-shadow:0 2px 12px rgba(0,0,0,.06);overflow-x:auto}
+.chk table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px}
+.chk th{background:#0a2647;color:#fff;padding:8px 10px;text-align:left;font-size:12px;white-space:nowrap}
+.chk td{padding:8px 10px;border-bottom:1px solid #f1f3f5;vertical-align:top}
+.st{font-size:11.5px;font-weight:800;padding:2px 9px;border-radius:10px;white-space:nowrap}
+.st.ok{background:#ebfbee;color:#2b8a3e}
+.st.warn{background:#fff9db;color:#e67700}
+.st.bad{background:#fff0f0;color:#c92a2a}
+.fixlist{background:#fff5f5;border:1px solid #ffc9c9;border-radius:14px;padding:16px 20px;font-size:13.5px}
+.fixlist li{margin:7px 0 7px 18px;color:#5c2b2b}
+.fixlist b{color:#c92a2a}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:4px}
 .card{background:#fff;border-radius:14px;padding:18px 18px 16px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:5px solid #1864ab;position:relative}
+.card.risk{border-top-color:#e03131}
+.card.strength{border-top-color:#2b8a3e}
 .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .badge.grade{background:#1864ab;color:#fff;font-weight:800;font-size:12px;padding:3px 10px;border-radius:14px}
+.badge.grade.r{background:#e03131}
+.badge.grade.s{background:#2b8a3e}
 .dday{font-weight:800;font-size:13px;padding:3px 10px;border-radius:14px;background:#e7f5ff;color:#1864ab}
 .dday.urgent{background:#fff0f0;color:#c92a2a}
 .dday.soon{background:#fff9db;color:#e67700}
 .dday.always{background:#ebfbee;color:#2b8a3e}
-.card-name{font-size:17px;color:#0a2647;margin-bottom:8px;line-height:1.35}
+.card-name{font-size:16.5px;color:#0a2647;margin-bottom:8px;line-height:1.35}
 .tags{margin-bottom:10px}
 .tag{display:inline-block;background:#f1f3f5;color:#495057;font-size:11.5px;padding:2px 9px;border-radius:10px;margin-right:5px}
-.tag.st{background:#e3fafc;color:#0c8599}
+.tag.st2{background:#e3fafc;color:#0c8599}
 .kv{width:100%;border-collapse:collapse;font-size:13px}
-.kv th{text-align:left;color:#868e96;width:74px;padding:4px 8px 4px 0;vertical-align:top;white-space:nowrap;font-weight:600}
+.kv th{text-align:left;color:#868e96;width:78px;padding:4px 8px 4px 0;vertical-align:top;white-space:nowrap;font-weight:600}
 .kv td{padding:4px 0;vertical-align:top}
 .why{margin-top:11px;background:#f8f9fa;border-radius:9px;padding:9px 12px;font-size:12.5px;color:#343a40}
 .cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
@@ -55,14 +83,12 @@ section{margin-top:22px}
 .c3-top{display:flex;align-items:center;gap:10px;margin-bottom:5px;flex-wrap:wrap}
 .verdict{font-size:11.5px;font-weight:800;padding:2px 9px;border-radius:10px;color:#fff;background:#868e96}
 .verdict.hold{background:#f08c00}
-.c3-top h4{font-size:14.5px;color:#0a2647}
-.c3-agency{font-size:12px;color:#868e96;margin-bottom:5px}
 .c3-reason{font-size:12.5px;color:#495057}
 .roadmap{background:#fff;border-radius:14px;padding:8px 6px;box-shadow:0 2px 12px rgba(0,0,0,.06);overflow-x:auto}
 .roadmap table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
 .roadmap th{background:#0a2647;color:#fff;padding:9px 10px;text-align:left;font-size:12.5px}
 .roadmap td{padding:9px 10px;border-bottom:1px solid #f1f3f5}
-.rm-when{white-space:nowrap;font-weight:700;color:#1864ab;width:96px}
+.rm-when{white-space:nowrap;font-weight:700;color:#1864ab;width:110px}
 .rm-ch{white-space:nowrap;color:#868e96;font-size:12px}
 .sources{background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:12.5px;color:#495057}
 .sources li{margin:5px 0 5px 18px}
@@ -83,10 +109,10 @@ footer{text-align:center;color:#868e96;font-size:12px;margin-top:26px;line-heigh
 <header>
   <div class="wrap">
     <div class="htitle">🐟 (주)다복수산 정책자금 매칭 프로그램</div>
-    <div class="hsub">2026년 하반기 현행화 — 지금 당장 신청 가능한 정책자금 정리 &nbsp;<span class="vbadge">v14</span></div>
+    <div class="hsub">2026 경영안정자금 신청 실행 단계 — 기업은행 제출서류 10종 정밀분석 반영 &nbsp;<span class="vbadge">v15</span></div>
     <div class="live-date-header">
       <div><div class="today-big" id="liveDateBig">—</div><div class="today-meta" id="liveTodayTitle">기준일 자동표시</div></div>
-      <div class="today-meta">카네기경영연구원(주) · CMR-2026-0630-014<br>자동 D-day · 모바일 최적화 · 📤 공유</div>
+      <div class="today-meta">카네기경영연구원(주) · CMR-2026-0901-015<br>자동 D-day · 모바일 최적화 · 📤 공유</div>
     </div>
   </div>
 </header>
@@ -94,175 +120,242 @@ footer{text-align:center;color:#868e96;font-size:12px;margin-top:26px;line-heigh
 <div class="wrap">
 
   <div class="alert0">
-    <div class="a0-t">⚠ 0순위 선결과제 — NICE 등급 회복 확인</div>
-    <p>NICE 보고서(2026.04.23)는 연체 2건(중진공 1,932만 + NH농협캐피탈 218만)이 <b>미해제 상태</b>로 작성되어 등급이 <b>CCC0·WATCH 위험</b>입니다. 4/24 해소했더라도 신용정보원 "해제" 반영 + NICE 등급 회복까지 1~3개월 소요(현재 약 2개월 경과). <b>신규 NICE 조회로 "B대 회복 + 연체 해제"를 먼저 확인하세요.</b></p>
+    <div class="a0-t">🚨 0순위 — 대출상담확인서 유효기간 내 접수 <span class="a0-dday" id="a0dday">—</span></div>
+    <p>IBK기업은행 목포지점 대출상담확인서는 <b>2026.08.06 작성분</b>이며, 서식상 <b>"접수일 기준 1개월 이내 작성분"만 유효</b>합니다. 유효 한도는 <b>9/6(일)</b>이므로 주말을 감안하면 <b>실무 마감은 9/4(금)</b>입니다. 이번 주 안에 전남중소기업일자리경제진흥원에 접수를 완료하거나, 놓칠 경우 확인서를 재발급받아야 합니다.</p>
     <div class="a0-then">
-      <div class="ok"><b>✅ 등급 B대 회복 시</b><br>아래 TIER 1 보증·융자 전부 신청 진행</div>
-      <div><b>⏳ 아직 CCC·연체 잔존 시</b><br>무상·바우처(TIER 2)부터 우선 추진</div>
+      <div class="ok"><b>✅ 9/4(금)까지 접수 시</b><br>상담확인서(8/6) 그대로 유효 — 아래 보완 4건만 정리 후 즉시 접수</div>
+      <div><b>⏳ 접수 지연 시</b><br>IBK목포지점 방문 → 대출상담확인서 재발급(당일 가능) 후 접수</div>
     </div>
+  </div>
+
+  <div class="apply">
+    <div class="ap-t">📋 진행 중인 신청 — 전라남도 중소기업 경영안정자금</div>
+    <table>
+      <tr><th>신청액</th><td><b>3억원 (300백만원)</b> — 용도: 원재료(수산물) 매입 대금</td></tr>
+      <tr><th>대출은행</th><td>IBK기업은행 목포지점 (대출상담확인서 2026.08.06 지점장 확인 완료 · 상담금액 3억원)</td></tr>
+      <tr><th>담보</th><td>신용보증기금 보증서 (☑ 신청서 기재)</td></tr>
+      <tr><th>상환·이자지원</th><td><b>2년거치 일시상환 — 이자지원 2.0~2.5%p</b> (3억 기준 연 최대 750만원 이자 절감)</td></tr>
+      <tr><th>접수처</th><td>전라남도지사 · 전라남도중소기업일자리경제진흥원 (신청서 2026.07 작성분)</td></tr>
+      <tr><th>서류 상태</th><td>기업은행 제출서류 10종 구비 완료(8/31 정리) — 아래 체크리스트·보완사항 참조</td></tr>
+    </table>
   </div>
 
   <div class="profile">
     <table>
-      <tr><th>기업</th><td>(주)다복수산 · 대표 오정목 · 사업자 871-86-00390</td></tr>
-      <tr><th>업종</th><td>G46102 음·식료품 및 담배 중개업 (수산물 도매·중개·유통)</td></tr>
-      <tr><th>소재지</th><td>전남 해남군 북평면 땅끝해안로 4088 (인구감소지역)</td></tr>
-      <tr><th>매출 추이</th><td>2022년 73.0억 → 2023년 35.5억 → 2024년 24.2억 → 2025년 약 23.8억(보합 -1.6%)</td></tr>
-      <tr><th>신용</th><td>NICE CCC0 · WATCH 위험 (2026.04.23, 연체 2건 미해제 기준)</td></tr>
-      <tr><th>거래</th><td>쿠팡·곰곰(PB) 납품 + 일본·중국·베트남 수출</td></tr>
+      <tr><th>기업</th><td>(주)다복수산 · 대표 오정목 · 사업자 871-86-00390 · 2016.02.22 개업(업력 10년)</td></tr>
+      <tr><th>업종</th><td>도매 및 소매업(수산물·주업종코드 512231) + 수산물 냉동품 제조업 — 중소기업(소기업) 적합</td></tr>
+      <tr><th>소재지</th><td>전남 해남군 북평면 땅끝해안로 4088 (인구감소지역 · ㈜다복 건물 임차)</td></tr>
+      <tr><th>매출 추이</th><td>2022년 73.0억 → 2023년 35.5억 → 2024년 24.2억 → <b>2025년 23.6억(결산 확정 -2.3%)</b> → 2026년 상반기 12.53억(전년 동기와 동일 수준)</td></tr>
+      <tr><th>수익성</th><td>2025년 영업이익 0.96억 · <b>당기순이익 0.82억(+63.4%)</b> · 이월결손금 0 · 3년 연속 흑자</td></tr>
+      <tr><th>거래</th><td>쿠팡(주) 2026년 상품공급계약 갱신(2025.12.30 전자서명) — 2025년 쿠팡 매출 15.0억(63%) · 2026 상반기 4.4억(36%, 유진유통·대한수산 등 거래처 다변화)</td></tr>
     </table>
   </div>
 
   <div class="change">
-    🔄 <b>4월 대비 핵심 변동</b> — 2025년 매출이 약 23.8억으로 2024년(24.2억)과 <b>보합(-1.6%)</b>이 되어, 직전 분석의 강점이던 "매출 -31.87% 급감 = 긴급경영 자동요건"이 <b>약화</b>되었습니다. 따라서 동력을 <b>① 수산 유통 특화자금 ② 인구감소지역·전남 지역자금 ③ 신용회복 후 보증부 운영자금</b>으로 재편했습니다.
+    🔄 <b>6월(v14) 대비 핵심 변동</b> — ① 전남 경영안정자금 <b>실제 신청 실행 단계</b> 진입(신청서·IBK 상담확인서·제출서류 10종 완비). ② 2025년 결산 확정: 순이익 +63.4%, 부채비율 150.5%→<b>132.3%</b> 개선. ③ 다만 금융거래확인서(8/25)에 <b>2026년 3~8월 연체 정리 이력</b>(중진공 5건 최장 98일 · 농협캐피탈 3건)이 그대로 표기되어 <b>연체 소명서가 심사 통과의 최대 관건</b>이 되었습니다. 현재 연체는 3개 기관 모두 0원.
   </div>
 
   <section>
-    <div class="sec-h">🔥 TIER 1 — 지금 즉시 추진 (적합도 최상)</div>
-    <div class="cards">
-    <div class="card tA" data-cycle="quarterly" data-date="2026-07-01">
-      <div class="card-top">
-        <span class="badge grade">TIER 1</span>
-        <span class="dday" data-dday>—</span>
-      </div>
-      <h3 class="card-name">전라남도 긴급경영안정자금</h3>
-      <div class="tags"><span class="tag">운영자금</span><span class="tag st">적격(소명)</span></div>
-      <table class="kv">
-        <tr><th>운영</th><td>전남도 + 전남신용보증재단</td></tr>
-        <tr><th>한도</th><td><b>업체당 최대 3억원</b></td></tr>
-        <tr><th>금리·지원</th><td>이자 2.5%p 지원(이차보전)</td></tr>
-        <tr><th>적격성</th><td>관세·대외환경 변화 피해 도내 중소기업. 수출기업(미·중·일) + 매출 3년 1/3토막을 정성 소명</td></tr>
-        <tr><th>신청·문의</th><td>전남신보 ☎1588-3884 / 전남도 ☎061-286-3800</td></tr>
+    <div class="sec-h">📊 2025년 결산 확정 재무 (세무조정계산서 · 2026.03.31 신고)</div>
+    <div class="fin">
+      <table>
+        <tr><th>항목</th><th>2024년(제9기)</th><th>2025년(제10기)</th><th>증감·진단</th></tr>
+        <tr><td>매출액</td><td class="num">24.20억</td><td class="num"><b>23.63억</b></td><td><span class="down">-2.3%</span> 보합 (부가세 과표 23.82억)</td></tr>
+        <tr><td>영업이익</td><td class="num">1.06억</td><td class="num">0.96억</td><td>영업이익률 4.1% · 3년 연속 흑자</td></tr>
+        <tr><td>당기순이익</td><td class="num">0.50억</td><td class="num"><b>0.82억</b></td><td><span class="up">+63.4%</span> 무배당 전액 유보</td></tr>
+        <tr><td>부채비율</td><td class="num">150.5%</td><td class="num"><b>132.3%</b></td><td><span class="up">개선</span> 자기자본비율 43.1%</td></tr>
+        <tr><td>유동비율</td><td class="num">180.0%</td><td class="num"><b>280.8%</b></td><td><span class="up">개선</span> 단기지급능력 양호</td></tr>
+        <tr><td>이자보상배율</td><td class="num">1.45배</td><td class="num">1.75배</td><td><span class="up">개선</span></td></tr>
+        <tr><td>총차입금(회사채 포함)</td><td class="num">12.89억</td><td class="num">12.79억</td><td>차입금의존도 41.4% · 평균금리 <b>약 6.5%</b>(최고 9.7%)</td></tr>
+        <tr><td>2026 상반기 매출</td><td class="num">12.54억(25년 동기)</td><td class="num">12.53억</td><td>전년 동기와 사실상 동일 — 매출 안정 입증</td></tr>
       </table>
-      <div class="why">💡 3억·이자지원으로 한도·조건 최상. 분기 접수창 즉시 노림</div>
+      <div class="finnote">※ 금융기관 차입 잔액(금융거래확인서 2026.08.25 기준): 신한은행 2.56억(신보 보증부 2건, 만기 2026.10.12) + 중진공 0.97억(연 3.06%) + NH농협캐피탈 오토론 0.37억(연 11.7%) = 3.89억. 그 외 회사채 2.8억(한국투자증권)·신협 1.6억·관계사/개인 차입 등. 평균 조달금리 6.5%는 이자지원 2.0~2.5%p 정책자금의 필요성을 뒷받침하는 핵심 논리.</div>
     </div>
+  </section>
+
+  <section>
+    <div class="sec-h">✅ 기업은행 제출서류 10종 체크리스트 (정밀 판독 완료)</div>
+    <div class="chk">
+      <table>
+        <tr><th>서류</th><th>발급·작성일</th><th>상태</th><th>판독 결과·유의점</th></tr>
+        <tr><td>① 2025년 귀속 세무조정계산서 부속서류(85p)</td><td>2026.03.31 신고</td><td><span class="st ok">완비</span></td><td>결산 확정. 이월결손금 0 · 중소기업특별세액감면 적용</td></tr>
+        <tr><td>② 다복수산서류 합본(24p)</td><td>2026.08.25 발급</td><td><span class="st ok">완비</span></td><td>계산서합계표(25년·26년 상반기)+결산부속명세서+원천징수이행+주식변동. 금융기관제출용 사실증명</td></tr>
+        <tr><td>③ 부가세 과세표준증명</td><td>2026.08.25</td><td><span class="st ok">완비</span></td><td>2025년 23.82억 · 2026 상반기 12.53억 (26년 상반기 과세매출 0원 → 과세분 합계표 없음이 정상)</td></tr>
+        <tr><td>④ 금융거래확인서 — 신한은행</td><td>2026.08.25</td><td><span class="st ok">완비</span></td><td>2.56억 연체 무. 단 만기 10/12 → 기한연장 병행 필요</td></tr>
+        <tr><td>⑤ 금융거래확인서 — 중진공</td><td>2026.08.25</td><td><span class="st warn">재발급 권장</span></td><td>발급 용도가 <b>"회계법인 제출용"</b> → 금융기관제출용으로 재발급. 지체 5건(최장 98일, 8/11 전액 정리) 표기 → 소명 필수</td></tr>
+        <tr><td>⑥ 금융거래확인서 — NH농협캐피탈</td><td>2026.08.25</td><td><span class="st ok">완비</span></td><td>연체 무(기준일). 최근 3개월 10~12일 연체 3건 표기 → 소명 포함</td></tr>
+        <tr><td>⑦ 사업자등록증명원</td><td>2026.04.13</td><td><span class="st bad">재발급</span></td><td><b>발급 4개월 경과</b> — 통상 3개월 이내 요구. 홈택스 즉시 재발급</td></tr>
+        <tr><td>⑧ 대표자 근로소득원천징수영수증(2025)</td><td>2026.02.28</td><td><span class="st ok">완비</span></td><td>총급여 8,520만원(㈜다복 6,000만 + 다복수산 2,520만 겸직)</td></tr>
+        <tr><td>⑨ 대표 이력서</td><td>2026.08.25</td><td><span class="st ok">완비</span></td><td>수산업 경력 15년(2011 명품수산~) · 다복수산 대표 10년</td></tr>
+        <tr><td>⑩ 2026년 쿠팡 상품공급계약서</td><td>2025.12.30 서명</td><td><span class="st ok">완비</span></td><td>직매입·일단위 정산·50일 현금지급. 월별 매입목표 연 약 17.4억 → 매출 지속성 증빙 자료</td></tr>
+        <tr><td>㉠ 경영안정자금 신청서 [별지1]</td><td>2026.07 작성</td><td><span class="st warn">보완 3건</span></td><td>아래 보완사항 ①~③ 수정 후 제출</td></tr>
+        <tr><td>㉡ 대출상담확인서 [별지2]</td><td>2026.08.06</td><td><span class="st warn">유효기간</span></td><td>접수일 기준 1개월 이내 유효 → <b>9/4(금)까지 접수</b> 또는 재발급</td></tr>
+        <tr><td>㉢ 정보이용활용동의서 [별지3]</td><td>양식만 보유</td><td><span class="st bad">서명 필요</span></td><td>서명본 미확인 — 대표 서명·날인 후 동봉</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-h">🛠️ 접수 전 보완 필요사항 (정밀분석에서 발견된 7건)</div>
+    <div class="fixlist"><ul>
+      <li><b>① 신청서 자금구분 미체크</b> — 상단 (□일반 □긴급경영안정자금 □동행지원) 셋 다 비어 있음 → 해당 구분(일반) 체크</li>
+      <li><b>② 신청서 신청일 "일" 공란</b> — "2026년 07월 __일" → 접수일 기준으로 기재</li>
+      <li><b>③ 신청서 매출액 단위 오류</b> — "백만원" 칸에 원 단위(2,304,718,220)로 기재 → "2,305백만원"으로 정정 (※ 이 수치는 2025년 면세 계산서 매출. 부가세 과표 기준은 2,381,849,500원 — 어느 기준인지 통일)</li>
+      <li><b>④ 사업자등록증명원 재발급</b> — 2026.04.13 발급분(4개월 경과) → 홈택스에서 최신 발급</li>
+      <li><b>⑤ 중진공 금융거래확인서 용도 변경 재발급</b> — "회계법인 제출용" → "금융기관 제출용"</li>
+      <li><b>⑥ 정보이용활용동의서 서명본 작성</b> — [별지 제3호] 양식(hwp)만 있고 서명본 없음</li>
+      <li><b>⑦ 연락처 표기 불일치</b> — 신청서 061-532-0602 vs 세무서류 061-553-0602 → 하나로 통일(문의 시 혼선 방지)</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <div class="sec-h">⚠️ 심사 리스크 4 &amp; 소명 전략</div>
+    <div class="cards">
+    <div class="card risk">
+      <div class="card-top"><span class="badge grade r">RISK 1 · 최대 관건</span></div>
+      <h3 class="card-name">2026년 연체 정리 이력 (확인서에 명기)</h3>
+      <table class="kv">
+        <tr><th>내용</th><td>중진공 5건(3~7월 발생, 지체 39~98일, 8/11 전액 정리) + 농협캐피탈 3건(6~8월, 10~12일, 정리 완료). 현재 3사 모두 연체 0</td></tr>
+        <tr><th>소명 논리</th><td>매출채권 회수 약 115일 + 쿠팡 50일 정산 구조로 인한 일시적 유동성 경색 → 8월 중 전액 정리 · 신한은행은 무연체 유지</td></tr>
+      </table>
+      <div class="why">💡 "연체이력 소명서" 1매를 선제 제출 — 원인(회수 지연)·정리 완료일·재발 방지책(경영안정자금으로 원재료 현금매입 전환)을 명시</div>
+    </div>
+    <div class="card risk">
+      <div class="card-top"><span class="badge grade r">RISK 2</span></div>
+      <h3 class="card-name">대표 가지급금 4.02억 (자산의 13%)</h3>
+      <table class="kv">
+        <tr><th>내용</th><td>단기대여금 4.02억(대표·관계사) → 지급이자 5,517만원 전액 손금불산입. 신보·은행이 실질자산에서 차감 평가 가능</td></tr>
+        <tr><th>소명 논리</th><td>인정이자 4.6% 정상 계상 중(미수수익 일치) → 단계적 상환계획서 제시</td></tr>
+      </table>
+      <div class="why">💡 보증심사 전에 일부라도 상환 실적을 만들면 효과가 큼</div>
+    </div>
+    <div class="card risk">
+      <div class="card-top"><span class="badge grade r">RISK 3</span></div>
+      <h3 class="card-name">관계사 자산 집중 (임차보증금 12.8억)</h3>
+      <table class="kv">
+        <tr><th>내용</th><td>㈜다복(대표 동일) 임차보증금 12.5억 + 대여금 — 자산의 41%가 관계사에 묶임. 가용 현금 664만원</td></tr>
+        <tr><th>소명 논리</th><td>임대차계약서·건물 등기부 등 실체 증빙 준비. "자산은 있으나 운전자금 회전이 막힌 구조" = 경영안정자금 필요성의 근거로 역이용</td></tr>
+      </table>
+      <div class="why">💡 관계사 거래 질의는 반드시 나옴 — 계약서·이사회 의사록 사전 준비</div>
+    </div>
+    <div class="card risk">
+      <div class="card-top"><span class="badge grade r">RISK 4</span></div>
+      <h3 class="card-name">신보 기보증 2건 + 신한 만기 10/12</h3>
+      <table class="kv">
+        <tr><th>내용</th><td>신용보증기금 기보증 2건(신한 2.56억, 보증비율 85%/80%) 존재 → 추가 3억 보증 한도 심사가 관건. 신한 2건 만기 2026.10.12</td></tr>
+        <tr><th>소명 논리</th><td>신보 목포지점 사전 상담으로 한도 확인. 신한 기한연장을 10월 초까지 병행 완료</td></tr>
+      </table>
+      <div class="why">💡 상시근로자 기재(신청서 2명)와 원천징수(7명) 간 정합성도 사전 정리</div>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-h">💪 심사 어필 포인트 5 (제출서류가 직접 입증)</div>
+    <div class="cards">
+    <div class="card strength">
+      <div class="card-top"><span class="badge grade s">STRONG 1</span></div>
+      <h3 class="card-name">2025년 결산 — 수익성·건전성 동반 개선</h3>
+      <div class="why">순이익 +63.4%(0.82억) · 부채비율 132.3%(-18.2%p) · 유동비율 280.8% · 이월결손금 0 · 무배당 전액 유보로 자본 확충. 3년 연속 흑자.</div>
+    </div>
+    <div class="card strength">
+      <div class="card-top"><span class="badge grade s">STRONG 2</span></div>
+      <h3 class="card-name">쿠팡 2026 계약 갱신 + 매출 안정</h3>
+      <div class="why">2025.12.30 전자계약 갱신(월별 매입목표 연 약 17.4억). 2026 상반기 매출 12.53억으로 전년 동기와 동일 — 급락기 종료를 서류로 입증. 유진유통 2.5억·대한수산 2.3억 등 거래처 다변화(쿠팡 의존 63%→36%).</div>
+    </div>
+    <div class="card strength">
+      <div class="card-top"><span class="badge grade s">STRONG 3</span></div>
+      <h3 class="card-name">이자지원 실익 — 평균금리 6.5% 구조</h3>
+      <div class="why">현 차입 평균금리 약 6.5%(최고 9.7% 구간 존재, 연 이자 5,517만원). 이자지원 2.0~2.5%p로 3억 기준 연 최대 750만원 절감 + 원재료 현금매입 전환으로 매입 조건 개선.</div>
+    </div>
+    <div class="card strength">
+      <div class="card-top"><span class="badge grade s">STRONG 4</span></div>
+      <h3 class="card-name">업력·전문성·지역 요건</h3>
+      <div class="why">업력 10년 소기업 · 대표 수산업 경력 15년 · 해남군(인구감소지역) 소재 · 수산물 유통 본업과 자금용도(원재료 매입) 완전 일치.</div>
+    </div>
+    <div class="card strength">
+      <div class="card-top"><span class="badge grade s">STRONG 5</span></div>
+      <h3 class="card-name">IBK 사전 상담 완료 — 은행 리스크 해소</h3>
+      <div class="why">IBK기업은행 목포지점이 상담금액 3억원·보증서 담보·2년거치 일시상환 조건으로 지점장 확인(8/6). 도 지원 결정 시 취급 가능성을 은행이 서면 확인한 상태.</div>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-h">⭐ 병행 추진 자금 (경영안정자금과 중복 아님)</div>
+    <div class="cards">
     <div class="card tD" data-cycle="always" data-date="">
-      <div class="card-top">
-        <span class="badge grade">TIER 1</span>
-        <span class="dday" data-dday>—</span>
-      </div>
-      <h3 class="card-name">수산물 유통·수매 정책자금</h3>
-      <div class="tags"><span class="tag">수산특화</span><span class="tag st">적격(업종 최적합)</span></div>
+      <div class="card-top"><span class="badge grade">병행</span><span class="dday" data-dday>—</span></div>
+      <h3 class="card-name">수산물 유통·수매 정책자금 (해수부·수협)</h3>
+      <div class="tags"><span class="tag">수산특화</span><span class="tag st2">업종 최적합</span></div>
       <table class="kv">
-        <tr><th>운영</th><td>해양수산부 · 수협(수산발전기금)</td></tr>
-        <tr><th>한도</th><td><b>수매·유통 운전자금</b></td></tr>
-        <tr><th>금리·지원</th><td>약 3% · 1년 단위</td></tr>
-        <tr><th>적격성</th><td>업종이 수산물 도매·중개 → 가장 직접 부합. 유통자금 2026년 1,943억 확대</td></tr>
-        <tr><th>신청·문의</th><td>관할 수협 조합 / susanfund.com / 해수부 유통정책과</td></tr>
+        <tr><th>내용</th><td>수산발전기금 수매·유통 운전자금 (약 3%, 1년 단위) — 유통자금 1,943억 확대</td></tr>
+        <tr><th>신청</th><td>관할 수협 조합 / susanfund.com</td></tr>
       </table>
-      <div class="why">💡 다복수산 본업과 100% 일치하는 업종특화 자금</div>
+      <div class="why">💡 전남 경영안정자금(도 자금)과 재원이 달라 병행 가능 — 수협 상담 권장</div>
     </div>
-    <div class="card tC" data-cycle="monthly" data-date="2026-07-06">
-      <div class="card-top">
-        <span class="badge grade">TIER 1</span>
-        <span class="dday" data-dday>—</span>
-      </div>
-      <h3 class="card-name">소상공인 일반경영안정자금</h3>
-      <div class="tags"><span class="tag">운영자금</span><span class="tag st">적격(연체해소 전제)</span></div>
-      <table class="kv">
-        <tr><th>운영</th><td>소상공인시장진흥공단</td></tr>
-        <tr><th>한도</th><td><b>최대 7,000만원</b></td></tr>
-        <tr><th>금리·지원</th><td>연 2%대 (분기 기준금리+가산)</td></tr>
-        <tr><th>적격성</th><td>업력 무관·기본요건. 세금체납·대출연체 없을 것</td></tr>
-        <tr><th>신청·문의</th><td>ols.semas.or.kr / ☎1533-0100</td></tr>
-      </table>
-      <div class="why">💡 직접대출 매월 첫째 주 접수 → 7월 초 즉시 신청 가능</div>
-    </div>
-    <div class="card tB" data-cycle="always" data-date="">
-      <div class="card-top">
-        <span class="badge grade">TIER 1</span>
-        <span class="dday" data-dday>—</span>
-      </div>
-      <h3 class="card-name">전남·해남 소상공인 육성자금</h3>
-      <div class="tags"><span class="tag">보증·운영</span><span class="tag st">조건부(자격확정)</span></div>
-      <table class="kv">
-        <tr><th>운영</th><td>전남도(1,000억)+해남군 이차보전+전남신보</td></tr>
-        <tr><th>한도</th><td><b>보증부 대출 + 이자 일부 보전</b></td></tr>
-        <tr><th>금리·지원</th><td>시군 이차보전</td></tr>
-        <tr><th>적격성</th><td>도소매 소상공인(상시근로자 5인 미만) 해당 시 — 상시근로자 수 확정 필요</td></tr>
-        <tr><th>신청·문의</th><td>해남군청 경제부서 / 전남신보 ☎1588-3884</td></tr>
-      </table>
-      <div class="why">💡 전남신보 보증→협약은행 대출, 시군 이자보전 결합</div>
-    </div></div>
-  </section>
-
-  <section>
-    <div class="sec-h">⭐ TIER 2 — 병행 추진 (조건부 적합)</div>
-    <div class="cards">
     <div class="card tE" data-cycle="periodic" data-date="">
-      <div class="card-top">
-        <span class="badge grade">TIER 2</span>
-        <span class="dday" data-dday>—</span>
-      </div>
-      <h3 class="card-name">수출바우처 (중기부 수출지원기반활용사업 / aT)</h3>
-      <div class="tags"><span class="tag">수출</span><span class="tag st">병행 추진</span></div>
+      <div class="card-top"><span class="badge grade">병행</span><span class="dday" data-dday>—</span></div>
+      <h3 class="card-name">수출바우처 (중기부 / aT)</h3>
+      <div class="tags"><span class="tag">수출</span><span class="tag st2">무상·보조</span></div>
       <table class="kv">
-        <tr><th>운영</th><td>중소벤처기업부 · 한국농수산식품유통공사</td></tr>
-        <tr><th>한도</th><td><b>14개 수출지원 메뉴 바우처</b></td></tr>
-        <tr><th>금리·지원</th><td>무상·보조(자부담 일부)</td></tr>
-        <tr><th>적격성</th><td>수출실적 보유(일·중·베트남) → 신청 가능. 신용영향 적어 우선 추진 가능</td></tr>
-        <tr><th>신청·문의</th><td>exportvoucher.com / aT global.at.or.kr</td></tr>
+        <tr><th>내용</th><td>14개 수출지원 메뉴 바우처 (무상·자부담 일부) — 수출실적(일·중·베트남) 보유로 신청 가능</td></tr>
+        <tr><th>신청</th><td>exportvoucher.com / aT global.at.or.kr — 하반기 모집 모니터링</td></tr>
       </table>
-      <div class="why">💡 무상성 자금 → 신용회복 여부와 무관하게 즉시 병행</div>
+      <div class="why">💡 융자가 아니라 신용·보증한도와 무관 — 즉시 병행</div>
     </div>
-    <div class="card tF" data-cycle="monthly" data-date="2026-07-06">
-      <div class="card-top">
-        <span class="badge grade">TIER 2</span>
-        <span class="dday" data-dday>—</span>
-      </div>
-      <h3 class="card-name">신용취약 소상공인자금</h3>
-      <div class="tags"><span class="tag">운영자금</span><span class="tag st">조건부(연체해소)</span></div>
+    <div class="card tC" data-cycle="monthly" data-date="2026-10-05">
+      <div class="card-top"><span class="badge grade">예비</span><span class="dday" data-dday>—</span></div>
+      <h3 class="card-name">소상공인 일반경영안정자금 (소진공)</h3>
+      <div class="tags"><span class="tag">운영자금</span><span class="tag st2">예비 카드</span></div>
       <table class="kv">
-        <tr><th>운영</th><td>소상공인시장진흥공단</td></tr>
-        <tr><th>한도</th><td><b>최대 3,000만원</b></td></tr>
-        <tr><th>금리·지원</th><td>기준금리 +1.6%p (변동)</td></tr>
-        <tr><th>적격성</th><td>중·저신용 소상공인(대표자 NCB 839점 이하)·신용교육 이수. ★연체 해소 후 신청</td></tr>
-        <tr><th>신청·문의</th><td>ols.semas.or.kr</td></tr>
+        <tr><th>내용</th><td>최대 7,000만원 · 직접대출 매월 첫째 주 접수. 세금체납·대출연체 없을 것(현재 충족)</td></tr>
+        <tr><th>신청</th><td>ols.semas.or.kr / ☎1533-0100</td></tr>
       </table>
-      <div class="why">💡 신용 낮아도 가능하나 연체 잔존 시 제외 → 해소 확인 필수</div>
+      <div class="why">💡 전남 경영안정자금 심사가 지연·부결될 경우의 예비 카드 (10월 초 접수창)</div>
     </div></div>
-  </section>
-
-  <section>
-    <div class="sec-h">⛔ TIER 3 — 보류·부적합 (사유 명시)</div>
-    <div class="cards3">
+    <div class="cards3" style="margin-top:14px">
     <div class="card3 hold">
-      <div class="c3-top"><span class="verdict hold">단기 보류</span><h4>중소벤처기업진흥공단 정책자금 (긴급경영·신시장진출)</h4></div>
-      <div class="c3-agency"></div>
-      <p class="c3-reason">한국신용정보원에 연체정보 등록된 기업은 중진공 융자제한 대상. 2026.01.25 중진공 연체이력 → 신용정보 해제 및 일정기간 경과 후 재검토. (4월엔 S등급 추천이었으나 현실 반영해 보류)</p>
+      <div class="c3-top"><span class="verdict hold">계속 보류</span><h4>중진공 정책자금 (긴급경영·신시장진출)</h4></div>
+      <p class="c3-reason">2026년 중진공 대출 자체에서 3~7월 5회 지체(최장 98일)가 발생, 8/11 정리 — 융자제한 사유가 갱신되어 <b>당분간 신규 융자 신청 부적절</b>. 잔여 원금 0.97억 성실 상환 이력을 6개월 이상 쌓은 뒤 재검토.</p>
     </div>
     <div class="card3 no">
-      <div class="c3-top"><span class="verdict no">부적합</span><h4>창업·인구감소지역 창업중소기업 세액감면</h4></div>
-      <div class="c3-agency"></div>
-      <p class="c3-reason">2026년 개편된 세액감면은 신규 창업기업 대상. 다복수산은 2016년 설립이라 창업 세액감면 요건 미충족.</p>
+      <div class="c3-top"><span class="verdict">부적합</span><h4>창업·인구감소지역 창업 세액감면</h4></div>
+      <p class="c3-reason">신규 창업기업 대상 — 다복수산은 2016년 설립이라 요건 미충족 (기존 결론 유지).</p>
     </div></div>
   </section>
 
   <section>
-    <div class="sec-h">🗺️ 실행 로드맵</div>
+    <div class="sec-h">🗺️ 9월 실행 로드맵</div>
     <div class="roadmap">
       <table>
         <tr><th>시점</th><th>액션</th><th>창구</th></tr>
-        <tr><td class='rm-when'>즉시 (이번 주)</td><td class='rm-act'>❶ 신규 NICE 기업조회로 등급·연체해제 확인 (0순위 선결과제)</td><td class='rm-ch'>NICE</td></tr><tr><td class='rm-when'>즉시 (이번 주)</td><td class='rm-act'>❷ 국세·지방세 완납증명 재발급, 4대보험 완납 최신화</td><td class='rm-ch'>홈택스·위택스·4대보험포털</td></tr><tr><td class='rm-when'>즉시 (이번 주)</td><td class='rm-act'>❸ 상시근로자 수 확정(소상공인 자격 판정)</td><td class='rm-ch'>내부</td></tr><tr><td class='rm-when'>7월 초</td><td class='rm-act'>❹ 소상공인 일반경영안정자금 직접대출 접수(월초 창)</td><td class='rm-ch'>ols.semas.or.kr</td></tr><tr><td class='rm-when'>7월 초</td><td class='rm-act'>❺ 전남 긴급경영안정자금 3분기 접수 + 적격성 사전확인</td><td class='rm-ch'>전남도·전남신보</td></tr><tr><td class='rm-when'>7월 중</td><td class='rm-act'>❻ 수산물 유통·수매 정책자금 상담</td><td class='rm-ch'>관할 수협</td></tr><tr><td class='rm-when'>7월 중</td><td class='rm-act'>❼ 전남·해남 소상공인 육성자금 보증상담</td><td class='rm-ch'>전남신보 해남</td></tr><tr><td class='rm-when'>병행</td><td class='rm-act'>❽ 수출바우처 하반기 모집 모니터링·신청</td><td class='rm-ch'>exportvoucher·aT</td></tr>
+        <tr><td class='rm-when'>9/1(화)~9/2(수)</td><td>❶ 신청서 보완 3건(자금구분 체크·신청일·매출단위) + 정보이용활용동의서 서명</td><td class='rm-ch'>내부</td></tr>
+        <tr><td class='rm-when'>9/1(화)~9/2(수)</td><td>❷ 사업자등록증명원 재발급(홈택스) + 중진공 확인서 "금융기관제출용" 재발급</td><td class='rm-ch'>홈택스·중진공</td></tr>
+        <tr><td class='rm-when'>9/2(수)~9/3(목)</td><td>❸ 연체이력 소명서·가지급금 상환계획·임대차 증빙 준비</td><td class='rm-ch'>내부·세무대리인</td></tr>
+        <tr><td class='rm-when'><b>~9/4(금)</b></td><td>❹ <b>경영안정자금 접수 완료</b> (대출상담확인서 유효기간 내)</td><td class='rm-ch'>전남중소기업일자리경제진흥원</td></tr>
+        <tr><td class='rm-when'>접수 직후</td><td>❺ 신용보증기금 목포지점 보증 사전상담 (기보증 2건 감안 한도 확인)</td><td class='rm-ch'>신보 목포</td></tr>
+        <tr><td class='rm-when'>9월 중~10월 초</td><td>❻ 신한은행 2.56억 만기(10/12) 기한연장 협의</td><td class='rm-ch'>신한 목포하당</td></tr>
+        <tr><td class='rm-when'>병행</td><td>❼ 수협 수산물 유통·수매자금 상담 + 수출바우처 하반기 모집 모니터링</td><td class='rm-ch'>수협·exportvoucher</td></tr>
+        <tr><td class='rm-when'>예비(10월 초)</td><td>❽ (심사 지연·부결 시) 소진공 일반경영안정자금 직접대출 접수</td><td class='rm-ch'>ols.semas.or.kr</td></tr>
       </table>
     </div>
   </section>
 
   <section>
-    <div class="sec-h">📚 참고 출처(공식)</div>
+    <div class="sec-h">📚 분석 근거 서류 (2026.09.01 정밀 판독)</div>
     <div class="sources"><ul>
-      <li>소상공인 정책자금 — ols.semas.or.kr / ☎1533-0100</li>
-      <li>중소기업 정책자금(중진공) — www.kosmes.or.kr / ☎1357</li>
-      <li>해수부 수산정책자금·유통/수매지원융자 — www.mof.go.kr / susanfund.com</li>
-      <li>전남 긴급경영안정자금·소상공인 육성자금 — 전남신보 ☎1588-3884 / 전남도 ☎061-286-3800</li>
-      <li>수출바우처 — www.exportvoucher.com / aT global.at.or.kr</li>
+      <li>전라남도 중소기업 경영안정자금 신청서 [별지1] (2026.07) · IBK기업은행 목포지점 대출상담확인서 [별지2] (2026.08.06)</li>
+      <li>2025년 귀속 세무조정계산서 부속서류 85p (2026.03.31 전자신고, 문정세무회계) — 결산 재무제표·차입금적수·가지급금 명세</li>
+      <li>금융거래확인서 3종 (신한 2026.08.25 · 중진공 2026.08.25 · NH농협캐피탈 2026.08.25)</li>
+      <li>부가가치세 과세표준증명 (2026.08.25, 해남세무서) · 매출처별 (세금)계산서 합계표 2025~2026 상반기</li>
+      <li>2026년 쿠팡 상품공급계약서 (2025.12.30 DocuSign) · 사업자등록증명원 · 대표 이력서·원천징수영수증</li>
+      <li>정책자금 공고: 전남도 경영안정자금(진흥원) · 소상공인 정책자금 ols.semas.or.kr · 수산발전기금 susanfund.com · 수출바우처 exportvoucher.com</li>
     </ul></div>
   </section>
 
   <footer>
-    본 자료는 NICE 기업분석보고서(2026.04.23)·2025 부가세 과세표준·재무제표·완납증명 등 제출자료와 2026년 6월 공개 정책공고 기반 참고용 컨설팅 자료입니다.<br>
-    각 자금의 최종 지원여부·한도·금리는 신청시점 공고와 운영기관 심사에 따릅니다. 신청 전 0순위 선결과제(NICE 등급 회복)를 이행하세요.<br>
-    ⓒ 2026 카네기경영연구원(주) · CMR-2026-0630-014 · 🐟 (주)다복수산 · v14
+    본 자료는 2026.09.01 기준 기업은행 제출서류 10종 + 신청서·상담확인서 정밀 판독과 공개 정책공고를 토대로 작성된 참고용 컨설팅 자료입니다.<br>
+    최종 지원여부·한도·금리는 접수시점 공고와 전남도·신용보증기금·IBK기업은행 심사에 따릅니다.<br>
+    ⓒ 2026 카네기경영연구원(주) · CMR-2026-0901-015 · 🐟 (주)다복수산 · v15
   </footer>
 </div>
 
@@ -289,8 +382,18 @@ const TSTR=`${TODAY.getFullYear()}-${String(TODAY.getMonth()+1).padStart(2,'0')}
 document.getElementById('liveDateBig').textContent = TSTR;
 document.getElementById('liveTodayTitle').textContent = TSTR + ' 기준';
 function dleft(s){ const d=new Date(s); d.setHours(0,0,0,0); return Math.ceil((d-TODAY)/86400000); }
-document.querySelectorAll('.card').forEach(c=>{
+
+// 0순위 접수 마감 D-day (2026-09-04 실무 마감)
+(function(){
+  const el=document.getElementById('a0dday'); const n=dleft('2026-09-04');
+  if(n>0) el.textContent='접수 마감 D-'+n;
+  else if(n===0) el.textContent='오늘이 접수 마감일!';
+  else { el.textContent='유효기간 경과 — 상담확인서 재발급 필요'; }
+})();
+
+document.querySelectorAll('.card[data-cycle]').forEach(c=>{
   const cyc=c.dataset.cycle, dt=c.dataset.date, el=c.querySelector('[data-dday]');
+  if(!el) return;
   if(cyc==='always'){ el.textContent='🟡 수시 접수'; el.classList.add('always'); return; }
   if(cyc==='periodic'){ el.textContent='🔵 차수별 모집'; return; }
   if(dt){
@@ -302,7 +405,7 @@ document.querySelectorAll('.card').forEach(c=>{
 
 // ===== 공유 + 상단 스크롤 =====
 function sharePage(){
-  const d={title:'(주)다복수산 정책자금 매칭 v14',text:'2026 하반기 현행화 — 지금 당장 신청 가능한 정책자금 (카네기경영연구원)',url:location.href};
+  const d={title:'(주)다복수산 정책자금 매칭 v15',text:'2026 경영안정자금 신청 실행 단계 — 기업은행 제출서류 정밀분석 (카네기경영연구원)',url:location.href};
   if(navigator.share) navigator.share(d).catch(()=>{});
   else navigator.clipboard.writeText(location.href).then(()=>alert('📋 URL 복사됨!\n\n'+location.href)).catch(()=>prompt('URL을 복사하세요:',location.href));
 }
