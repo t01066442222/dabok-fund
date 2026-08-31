@@ -54,8 +54,20 @@ section{margin-top:22px}
 .st.warn{background:#fff9db;color:#e67700}
 .st.bad{background:#fff0f0;color:#c92a2a}
 .fixlist{background:#fff5f5;border:1px solid #ffc9c9;border-radius:14px;padding:16px 20px;font-size:13.5px}
-.fixlist li{margin:7px 0 7px 18px;color:#5c2b2b}
-.fixlist b{color:#c92a2a}
+.fix-progress{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.fix-count{font-weight:800;font-size:15px;color:#c92a2a;white-space:nowrap}
+.fix-count.done{color:#2b8a3e}
+.fix-bar{flex:1;min-width:140px;height:12px;background:#ffe3e3;border-radius:8px;overflow:hidden}
+.fix-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#e03131,#f08c00);border-radius:8px;transition:width .3s}
+.fix-bar i.done{background:linear-gradient(90deg,#37b24d,#2b8a3e)}
+.fix-item{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;margin:5px 0;background:#fff;border-radius:10px;border-left:4px solid #e03131;cursor:pointer;user-select:none}
+.fix-item input{margin-top:4px;width:17px;height:17px;accent-color:#2b8a3e;cursor:pointer;flex-shrink:0}
+.fix-item .fx-t{font-size:13.5px;color:#5c2b2b;line-height:1.55}
+.fix-item .fx-t b{color:#c92a2a}
+.fix-item.checked{border-left-color:#2b8a3e;background:#f4fce3}
+.fix-item.checked .fx-t{text-decoration:line-through;color:#868e96}
+.fix-item.checked .fx-t b{color:#868e96}
+.fix-note{margin-top:10px;font-size:12px;color:#868e96}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:4px}
 .card{background:#fff;border-radius:14px;padding:18px 18px 16px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:5px solid #1864ab;position:relative}
 .card.risk{border-top-color:#e03131}
@@ -203,16 +215,23 @@ footer{text-align:center;color:#868e96;font-size:12px;margin-top:26px;line-heigh
   </section>
 
   <section>
-    <div class="sec-h">🛠️ 접수 전 보완 필요사항 (정밀분석에서 발견된 7건)</div>
-    <div class="fixlist"><ul>
-      <li><b>① 신청서 자금구분 미체크</b> — 상단 (□일반 □긴급경영안정자금 □동행지원) 셋 다 비어 있음 → 해당 구분(일반) 체크</li>
-      <li><b>② 신청서 신청일 "일" 공란</b> — "2026년 07월 __일" → 접수일 기준으로 기재</li>
-      <li><b>③ 신청서 매출액 단위 오류</b> — "백만원" 칸에 원 단위(2,304,718,220)로 기재 → "2,305백만원"으로 정정 (※ 이 수치는 2025년 면세 계산서 매출. 부가세 과표 기준은 2,381,849,500원 — 어느 기준인지 통일)</li>
-      <li><b>④ 사업자등록증명원 재발급</b> — 2026.04.13 발급분(4개월 경과) → 홈택스에서 최신 발급</li>
-      <li><b>⑤ 중진공 금융거래확인서 용도 변경 재발급</b> — "회계법인 제출용" → "금융기관 제출용"</li>
-      <li><b>⑥ 정보이용활용동의서 서명본 작성</b> — [별지 제3호] 양식(hwp)만 있고 서명본 없음</li>
-      <li><b>⑦ 연락처 표기 불일치</b> — 신청서 061-532-0602 vs 세무서류 061-553-0602 → 하나로 통일(문의 시 혼선 방지)</li>
-    </ul></div>
+    <div class="sec-h">🛠️ 접수 전 보완 체크리스트 (정밀분석에서 발견된 7건)</div>
+    <div class="fixlist">
+      <div class="fix-progress">
+        <span class="fix-count" id="fixCount">0 / 7 완료</span>
+        <div class="fix-bar"><i id="fixBar"></i></div>
+      </div>
+      <div id="fixList">
+        <label class="fix-item"><input type="checkbox" data-fix="f1"><span class="fx-t"><b>① 신청서 자금구분 체크</b> — 상단 (□일반 □긴급경영안정자금 □동행지원) 셋 다 비어 있음 → 해당 구분(일반)에 체크</span></label>
+        <label class="fix-item"><input type="checkbox" data-fix="f2"><span class="fx-t"><b>② 신청서 신청일 기재</b> — "2026년 07월 __일"로 "일"이 공란 → 접수일 기준으로 기재</span></label>
+        <label class="fix-item"><input type="checkbox" data-fix="f3"><span class="fx-t"><b>③ 신청서 매출액 단위 정정</b> — "백만원" 칸에 원 단위(2,304,718,220)로 기재됨 → "2,305백만원"으로 정정 (※ 이 수치는 2025년 면세 계산서 매출. 부가세 과표 기준은 2,381,849,500원 — 어느 기준인지 통일)</span></label>
+        <label class="fix-item"><input type="checkbox" data-fix="f4"><span class="fx-t"><b>④ 사업자등록증명원 재발급</b> — 2026.04.13 발급분(4개월 경과, 통상 3개월 이내 요구) → 홈택스에서 즉시 재발급</span></label>
+        <label class="fix-item"><input type="checkbox" data-fix="f5"><span class="fx-t"><b>⑤ 중진공 금융거래확인서 재발급</b> — 발급 용도가 "회계법인 제출용"으로 되어 있음 → "금융기관 제출용"으로 변경 발급</span></label>
+        <label class="fix-item"><input type="checkbox" data-fix="f6"><span class="fx-t"><b>⑥ 정보이용활용동의서 서명본 작성</b> — [별지 제3호] 양식(hwp)만 있고 대표 서명·날인본이 없음 → 작성 후 동봉</span></label>
+        <label class="fix-item"><input type="checkbox" data-fix="f7"><span class="fx-t"><b>⑦ 연락처 표기 통일</b> — 신청서 061-532-0602 vs 세무서류 061-553-0602 → 하나로 통일(심사 문의 시 혼선 방지)</span></label>
+      </div>
+      <div class="fix-note">✔ 체크 상태는 이 브라우저에 자동 저장됩니다 (다시 열어도 유지 · 기기별 저장). 7건 완료 후 9/4(금)까지 접수하세요.</div>
+    </div>
   </section>
 
   <section>
@@ -434,6 +453,35 @@ document.querySelectorAll('.card[data-cycle]').forEach(c=>{
     else { el.textContent = (cyc==='monthly'?'🟢 매월 접수':'🟢 분기 접수'); el.classList.add('always'); }
   } else { el.textContent='수시'; el.classList.add('always'); }
 });
+
+// ===== 접수 전 보완 체크리스트 (localStorage 저장) =====
+(function(){
+  const KEY='dabok_fix_v15';
+  const boxes=document.querySelectorAll('#fixList input[data-fix]');
+  const cnt=document.getElementById('fixCount'), bar=document.getElementById('fixBar');
+  let saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ saved={}; }
+  function render(){
+    let done=0;
+    boxes.forEach(b=>{
+      b.closest('.fix-item').classList.toggle('checked', b.checked);
+      if(b.checked) done++;
+    });
+    cnt.textContent = done+' / '+boxes.length+' 완료' + (done===boxes.length?' 🎉 접수 준비 끝!':'');
+    cnt.classList.toggle('done', done===boxes.length);
+    bar.style.width = (done/boxes.length*100)+'%';
+    bar.classList.toggle('done', done===boxes.length);
+  }
+  boxes.forEach(b=>{
+    if(saved[b.dataset.fix]) b.checked=true;
+    b.addEventListener('change',()=>{
+      saved[b.dataset.fix]=b.checked;
+      try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(e){}
+      render();
+    });
+  });
+  render();
+})();
 
 // ===== 공유 + 상단 스크롤 =====
 function sharePage(){
