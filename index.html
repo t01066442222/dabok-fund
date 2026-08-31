@@ -76,6 +76,13 @@ section{margin-top:22px}
 .kv th{text-align:left;color:#868e96;width:78px;padding:4px 8px 4px 0;vertical-align:top;white-space:nowrap;font-weight:600}
 .kv td{padding:4px 0;vertical-align:top}
 .why{margin-top:11px;background:#f8f9fa;border-radius:9px;padding:9px 12px;font-size:12.5px;color:#343a40}
+.kv a,.why a{color:#1864ab;font-weight:700;text-decoration:none;border-bottom:1px dotted #1864ab;word-break:break-all}
+.kv a:hover,.why a:hover{color:#0a2647;border-bottom-style:solid}
+.linkrow{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+.linkbtn{display:inline-block;background:#1864ab;color:#fff !important;font-size:12px;font-weight:700;padding:6px 13px;border-radius:18px;text-decoration:none;border:none}
+.linkbtn:hover{background:#0a2647}
+.linkbtn.sub{background:#e7f5ff;color:#1864ab !important}
+.linkbtn.sub:hover{background:#d0ebff}
 .cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
 .card3{background:#fff;border-radius:12px;padding:15px 16px;border-left:5px solid #adb5bd}
 .card3.hold{border-left-color:#f08c00;background:#fff9f0}
@@ -285,32 +292,57 @@ footer{text-align:center;color:#868e96;font-size:12px;margin-top:26px;line-heigh
     <div class="card tD" data-cycle="always" data-date="">
       <div class="card-top"><span class="badge grade">병행</span><span class="dday" data-dday>—</span></div>
       <h3 class="card-name">수산물 유통·수매 정책자금 (해수부·수협)</h3>
-      <div class="tags"><span class="tag">수산특화</span><span class="tag st2">업종 최적합</span></div>
+      <div class="tags"><span class="tag">수산특화</span><span class="tag st2">업종 최적합</span><span class="tag">융자</span></div>
       <table class="kv">
-        <tr><th>내용</th><td>수산발전기금 수매·유통 운전자금 (약 3%, 1년 단위) — 유통자금 1,943억 확대</td></tr>
-        <tr><th>신청</th><td>관할 수협 조합 / susanfund.com</td></tr>
+        <tr><th>무엇인가</th><td>해양수산부가 수산발전기금으로 운영하는 <b>수산정책자금</b> 중 유통·수매 부문. 산지 수산물을 사들여(수매) 보관·판매하는 유통업자에게 <b>수매·비축·유통 운전자금</b>을 저리로 융자. 2026년 유통자금 규모 <b>1,943억원으로 확대</b>, 수매지원융자 신규사업자도 모집</td></tr>
+        <tr><th>지원대상</th><td>수산물 유통업·가공업 사업자, 수매·비축 사업자 — 다복수산(수산물 도매·중개, 주업종 512231)은 <b>본업 그대로 해당</b></td></tr>
+        <tr><th>조건</th><td>금리 연 약 2.5~3%(고정) · 통상 <b>1년 단위 회전</b>(수매 후 판매대금으로 상환) · 담보 또는 수산 관련 보증 필요</td></tr>
+        <tr><th>신청 절차</th><td>① 관할 수협 조합(해남·완도 지역조합) 방문 상담 → ② 수매계획·매출증빙 제출 → ③ 조합·Sh수협은행 심사 → ④ 약정·실행. 전복 산지 수매는 조합 경유가 기본 경로</td></tr>
+        <tr><th>준비서류</th><td>사업자등록증명 · 재무제표 · 매입(수매) 계획 및 거래 증빙(전복 매입 계산서) — 이번에 정리한 기업은행 제출서류 그대로 재활용 가능</td></tr>
       </table>
-      <div class="why">💡 전남 경영안정자금(도 자금)과 재원이 달라 병행 가능 — 수협 상담 권장</div>
+      <div class="linkrow">
+        <a class="linkbtn" href="https://www.susanfund.com" target="_blank" rel="noopener">수산발전기금 통합정보 바로가기</a>
+        <a class="linkbtn sub" href="https://suhyup-bank.com" target="_blank" rel="noopener">Sh수협은행</a>
+        <a class="linkbtn sub" href="https://www.suhyup.co.kr" target="_blank" rel="noopener">수협중앙회(조합 찾기)</a>
+        <a class="linkbtn sub" href="https://www.mof.go.kr" target="_blank" rel="noopener">해양수산부</a>
+      </div>
+      <div class="why">💡 전남 경영안정자금(도 재원·신보 보증)과 <b>재원·심사기관이 완전히 달라 중복 아님</b>. 원재료(전복) 수매라는 자금용도가 본업과 100% 일치 — 관할 수협 조합에 9월 중 상담 권장. 문의: 해수부 유통정책과 / 관할 수협</div>
     </div>
     <div class="card tE" data-cycle="periodic" data-date="">
       <div class="card-top"><span class="badge grade">병행</span><span class="dday" data-dday>—</span></div>
-      <h3 class="card-name">수출바우처 (중기부 / aT)</h3>
-      <div class="tags"><span class="tag">수출</span><span class="tag st2">무상·보조</span></div>
+      <h3 class="card-name">수출바우처 (중기부 / aT 수산식품)</h3>
+      <div class="tags"><span class="tag">수출</span><span class="tag st2">무상·보조</span><span class="tag">신용 무관</span></div>
       <table class="kv">
-        <tr><th>내용</th><td>14개 수출지원 메뉴 바우처 (무상·자부담 일부) — 수출실적(일·중·베트남) 보유로 신청 가능</td></tr>
-        <tr><th>신청</th><td>exportvoucher.com / aT global.at.or.kr — 하반기 모집 모니터링</td></tr>
+        <tr><th>무엇인가</th><td>정부가 수출기업에 <b>바우처(포인트)</b>를 주고, 기업이 통·번역, 해외인증, 온·오프라인 마케팅, 전시회, 물류·통관, 디자인 등 <b>14개 메뉴</b>에서 골라 쓰는 보조사업. 대출이 아니라 <b>국고보조(50~80%) + 자부담</b> 구조라 신용등급·보증한도에 영향 없음</td></tr>
+        <tr><th>트랙 2개</th><td>① <b>중기부 수출지원기반활용사업</b>(일반 중소기업 트랙) ② <b>해수부·aT 수산식품 수출바우처</b>(수산식품 전용 트랙) — 다복수산은 전복 수출(일본·중국·베트남) 실적이 있어 <b>수산식품 전용 트랙이 더 유리</b>(경쟁률·적합성)</td></tr>
+        <tr><th>지원대상</th><td>수출실적 보유(또는 수출 준비) 중소기업 — 다복수산 그룹의 수출 실적으로 신청 가능</td></tr>
+        <tr><th>신청 절차</th><td>① 통합관리시스템(exportvoucher.com) 회원가입·기업정보 등록 → ② 모집공고 확인 후 온라인 신청 → ③ 선정 시 바우처 발급 → ④ 등록된 수행기관 골라 서비스 이용·정산. 공고는 통상 연 1~2회(상·하반기)</td></tr>
+        <tr><th>활용 예시</th><td>활전복 수출검역·해외인증 대행, 일본·베트남 바이어 매칭, 수출용 포장 디자인, 해외 온라인몰 입점 마케팅</td></tr>
       </table>
-      <div class="why">💡 융자가 아니라 신용·보증한도와 무관 — 즉시 병행</div>
+      <div class="linkrow">
+        <a class="linkbtn" href="https://www.exportvoucher.com" target="_blank" rel="noopener">수출바우처 통합관리시스템</a>
+        <a class="linkbtn sub" href="https://www.kati.net" target="_blank" rel="noopener">aT 농식품수출정보(KATI) 공고</a>
+        <a class="linkbtn sub" href="https://global.at.or.kr" target="_blank" rel="noopener">aT 수출종합지원</a>
+      </div>
+      <div class="why">💡 융자가 아니므로 <b>연체이력·신보 한도와 전혀 무관</b> — 경영안정자금 심사와 100% 병행 가능. 지금 할 일은 exportvoucher.com 가입 + KATI에서 하반기 수산식품 바우처 공고 알림 설정</div>
     </div>
     <div class="card tC" data-cycle="monthly" data-date="2026-10-05">
       <div class="card-top"><span class="badge grade">예비</span><span class="dday" data-dday>—</span></div>
       <h3 class="card-name">소상공인 일반경영안정자금 (소진공)</h3>
-      <div class="tags"><span class="tag">운영자금</span><span class="tag st2">예비 카드</span></div>
+      <div class="tags"><span class="tag">운영자금</span><span class="tag st2">예비 카드</span><span class="tag">직접대출</span></div>
       <table class="kv">
-        <tr><th>내용</th><td>최대 7,000만원 · 직접대출 매월 첫째 주 접수. 세금체납·대출연체 없을 것(현재 충족)</td></tr>
-        <tr><th>신청</th><td>ols.semas.or.kr / ☎1533-0100</td></tr>
+        <tr><th>무엇인가</th><td>소상공인시장진흥공단이 <b>은행을 거치지 않고 직접 대출</b>해주는 기본 운영자금. 업력·업종 제한이 거의 없는 소상공인 정책자금의 표준 상품</td></tr>
+        <tr><th>지원대상</th><td>소상공인 — 도·소매업은 <b>상시근로자 5인 미만</b>. 다복수산은 상시 2~3명이라 <b>자격 충족</b></td></tr>
+        <tr><th>한도·금리</th><td>최대 <b>7,000만원</b> · 분기별 공시금리(정책자금 기준금리+가산, 최근 연 2%대) · 5년 이내 상환(거치 포함)</td></tr>
+        <tr><th>필수요건</th><td>신청일 현재 <b>세금체납·대출연체 없을 것</b> — 8월 연체 전액 정리로 현재 충족. 단 국세완납증명 등 최신 발급분 필요</td></tr>
+        <tr><th>신청 절차</th><td>① 소상공인정책자금 사이트(ols.semas.or.kr)에서 <b>매월 첫째 주 직접대출 신청창</b> 오픈 시 온라인 신청(예산 소진 시 조기 마감·선착순 경쟁 심함) → ② 소진공 지역센터(목포센터) 심사 → ③ 약정·실행. 대리대출(은행 경유)은 매분기 첫째 주</td></tr>
       </table>
-      <div class="why">💡 전남 경영안정자금 심사가 지연·부결될 경우의 예비 카드 (10월 초 접수창)</div>
+      <div class="linkrow">
+        <a class="linkbtn" href="https://ols.semas.or.kr" target="_blank" rel="noopener">소상공인정책자금 신청(OLS)</a>
+        <a class="linkbtn sub" href="https://www.semas.or.kr" target="_blank" rel="noopener">소상공인시장진흥공단</a>
+        <a class="linkbtn sub" href="tel:1533-0100">☎ 1533-0100</a>
+      </div>
+      <div class="why">💡 전남 경영안정자금(3억)이 지연·부결될 경우의 <b>예비 카드</b> — 다음 접수창은 <b>10월 첫째 주</b>(위 D-day 자동 표시). 주의: 지자체 이차보전 자금과 중복수혜 제한이 있을 수 있어 전남 자금 <b>확정 후에는</b> 신청 전 1533-0100으로 중복 여부 확인</div>
     </div></div>
     <div class="cards3" style="margin-top:14px">
     <div class="card3 hold">
